@@ -8,7 +8,7 @@ def create_connection():
         connection = mysql.connector.connect(
             host='localhost',
             user='root',
-            password='dev123',
+            password='',
             database='expense_tracker'
         )
         return connection
@@ -271,4 +271,5 @@ def get_user_theme(Email):
             connection.close()
             return result['theme'] if result else 'light'
         except Error as e:
+
             return 'light'
